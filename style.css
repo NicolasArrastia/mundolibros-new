@@ -1,0 +1,285 @@
+/* https://vectr.com/tmp/edNTzC5fU/j33PFAHW3o.svg?width=400&height=200&select=j33PFAHW3opage0 */
+
+/* Fuentes importadas */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*
+font-family: 'Roboto', sans-serif;
+*/
+
+
+/* --- --- --- --- html(? --- --- --- --- */
+html{
+    font-size: 62.5%;
+}
+:root{
+    --color-principal:#282828;
+    --color-principal-dos:#1b1b1b;
+
+    --secondary:#89a3f0;
+
+    --color-secundario:#1f6f8b;
+    --color-fondo-uno:#99a8b2;
+    --color-fondo-dos:#e6d5b8;
+
+    --warning-principal:#ffe05d;
+    --warning-secundario:#ff9642;
+    --warning-light:#fff8cd;
+    --warning-letter:#646464;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* --- --- --- --- Header --- --- --- --- */
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: var(--color-principal);
+}
+li, a, button{
+    font-family: 'Roboto',"Montserrat",sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #edf0f1;
+    text-decoration: none;
+}
+/* --- logo --- */
+header .logo{
+    margin-right: auto;
+}
+/* --- Nav --- */
+.nav_links{
+    list-style:none;
+    text-transform: uppercase;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a{
+    transition: all .3s ease 0s;
+    font-family: 'Roboto',"Montserrat",sans-serif;
+}
+.nav_links li a:hover{
+    color: #0088a9
+}
+
+
+/* --- login --- */
+header button{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169, 1);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+}
+header button:hover{
+    background-color: rgba(0,136,169, 0.8);
+}
+
+/* --- --- --- --- Main --- --- --- --- */
+main{
+    min-height: 90vh;
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+}
+
+.background-img{
+    transition: all .5s ease 0s;
+    width: 100%;
+    height: 60vh;
+    background-image: url(img/background03.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.background-darker{
+    transition: all .75s ease 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.background-darker h1{
+    transition: all .75s ease 0s;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 7rem;
+}
+
+.background-darker:hover{
+    transition: all .75s ease 0s;
+    background-color: rgba(0, 0, 0, 0);
+}
+.background-darker:hover h1{
+    transition: all .75s ease 0s;
+    color: transparent;
+}
+
+.text-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem 10%;
+}
+.text-container>div{
+    width: 40%;
+}
+.text-container .underline{
+    background-color: rgb(137, 163, 240);
+    height: .5rem;
+    margin: 1rem 0rem;
+}
+.text-container h2{
+    font-size: 3rem;
+}
+.text-container p{
+    font-size: 1.6rem;
+}
+.text-container .galery{
+    border: 2px solid royalblue;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.galery img{
+    width: 100%;
+}
+
+main>.text-container:nth-of-type(2n),
+main>div:nth-of-type(2n):not(.error)
+{
+    box-shadow: inset 0px 0px 25px -10px #000000;
+}
+/* --- --- --- --- Footer --- --- --- --- */
+footer{
+    background-color: var(--color-principal);
+    display: grid;
+    color:#F6F0E8;
+}
+
+footer>*{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#footer{
+    display: grid;
+    grid-template: 1fr / 10% 30% 30% 30%;
+    padding: 4% 2%;
+}
+
+#footer div h4{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#follow i{
+  font-size: 3rem;
+  padding: 10px;
+  cursor: pointer;
+}
+.fa-twitter:hover{
+    transition: all .2s ease .05s;
+  color:#1DA1F2;
+}
+.fa-facebook-f:hover{
+  color:#1877F2;
+}
+.fa-instagram:hover{
+  color:#ED4956;
+}
+#footer a{
+  display: block;
+  margin: 0px;
+  padding: 10px 0;
+  color:white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color:#284d52;
+  border:3px solid #214349;
+}
+
+/* --- Inside #footer --- */
+#footer .logo{
+    grid-column: 1;
+    width: 50px;
+}
+
+#about{
+    grid-column: 2;
+}
+
+#follow{
+    grid-column: 4;
+    padding: 1rem;
+}
+#follow>div{
+    display: flex;
+    justify-content: space-around;
+}
+
+#contact{
+    grid-column: 3;
+}
+/* --- --- --- */
+#copyright{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: var(--color-principal-dos);
+}
+/* --- --- --- --- Extras --- --- --- --- */
+.error{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    background-color: var(--warning-principal);
+    border: .6rem solid var(--warning-secundario);
+    border-radius: 2rem;
+    color: var(--warning-letter);
+    text-align: center;
+}
+.error .fa-exclamation-triangle{
+    font-size: 7rem;
+    margin-bottom: 1rem;
+}
+.error h3{
+    font-size: 3rem;
+}
+.error p{
+    font-size: 2rem;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.p-1{
+    padding: 1rem;
+}
+.hp-1{
+    padding: 0rem 1rem;
+}
+/* --- --- --- --- MQs --- --- --- --- */
+@media screen and (max-width:1024px){
+    header{
+        background-color: red;
+    }
+}
