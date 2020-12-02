@@ -23,10 +23,10 @@
                     </li>
                     <li><a href="#">about</a></li>
                     <li><a href="#">features</a></li>
-                    <li><a href="products.html">#4</a></li>
+                    <li><a href="products.html">gallery</a></li>
                 </ul>
             </nav>
-            <a href="#" class="cta"><button>Sign Up</button></a>
+            <a href="signin.html" class="cta"><button>Login</button></a>
         </header>
 
         <main>
@@ -40,38 +40,40 @@
                     <h2>What is our purpose?</h2>
                     <div class="underline"></div>
                     <p>In <span>Mundo Libros</span translate=no> we want to make you happy with all of the books we have to share with you. The prices are really low, so you can get all of the books you've always wanted, just by clicking on them and buying it.</p>
+                    <h2>What kind of books we have?</h2>
+                    <div class="underline"></div>
+                    <p>Just watch at our products section to know all the books we have, maybe one of those will be your next favourite book </p>
                 </div>
                 <div>
-                    <h2>Our book stores</h2>
+                    <h2>Gallery of our book shops and some books</h2>
                     <div class="underline"></div>
-                    <div class="galery">
-                        <img src="img/background01.png" alt="background">
+                    <div class="gallery">
+                        <div class="">
+                            <img src="img/background01.png" alt="background">
+                        </div>
+                        <div class="">
+                            <img src="img/Psicología-del-color_-el-azul.png" alt="background">
+                        </div>
+                        <div class="">
+                            <img src="img/In-the-Key-of-Blue___.png" alt="background">
+                        </div>
+                        <div class="">
+                            <img src="img/background02.png" alt="background">
+                        </div>
                     </div>
                 </div>
             </section>
-            <ml-img></ml-img>
-            <ml-error></ml-error>
-            <ml-img></ml-img>
+            <section class="text-container">
+                <ml-img></ml-img>
+            </section>
+            <section class="text-container">
+                <ml-error></ml-error>
+            </section>
+            <section class="text-container">
+                <ml-img></ml-img>
+            </section>
         </main>
-
-        <footer>
-            <div>
-                <ml-logo></ml-logo>
-            </div>
-
-            <div class="social-media">
-                <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-            </div>
-
-            <div class="contact">
-                <p><a href="#">info</a> • <a href="#">support</a> • <a href="#">Marketing</a></p>
-                <p><a href="#">terms of use</a> • <a href="#">privacy policy</a></p>
-            </div>
-
-            <p id="copyright">© 2020 Mundo Libros!</p>
-        </footer>
+        <ml-footer></ml-footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/components.js"></script>
