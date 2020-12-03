@@ -27,6 +27,8 @@ html{
     --warning-secundario:#ff9642;
     --warning-light:#fff8cd;
     --warning-letter:#646464;
+
+    --sombra-base: 0px 0px 25px -10px #000000;
 }
 *{
     margin: 0;
@@ -67,7 +69,7 @@ header .logo{
 /* --- Nav --- */
 .nav_links{
     list-style:none;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .nav_links li{
     display: inline-block;
@@ -233,6 +235,12 @@ footer i{
     transition: all .2s ease .05s;
     color:#f563c9;
 }
+.social-media a:hover>.fa-linkedin,
+.social-media a:hover>.fa-linkedin-in
+{
+    transition: all .2s ease .05s;
+    color:#0e50a7;
+}
 
 .social-media a:hover{
     transition: all .2s ease .05s;
@@ -258,6 +266,19 @@ footer .contact p{
     text-align: center;
     color: grey;
 }
+/* --- --- --- --- Login --- --- --- --- */
+div.login{
+    width: 75%;
+    min-height: 500px;
+    margin: 5% auto;
+    background-color: #dddddd;
+    box-shadow: var(--sombra-base);
+}
+.login input{
+    padding: 1rem;
+    border: none;
+}
+
 /* --- --- --- --- Extras --- --- --- --- */
 div.error{
     width: 75%;
