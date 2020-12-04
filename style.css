@@ -84,7 +84,7 @@ header .logo{
 }
 
 
-/* --- login --- */
+/* --- Enter login Button --- */
 header button{
     padding: 9px 25px;
     background-color: rgba(0,136,169, 1);
@@ -166,14 +166,14 @@ main{
     display: grid;
     grid-template: 50% 50% / 50% 50%;
     background-color: #d8d8d8;
-    /* border: 2px solid royalblue; */
+
     box-shadow: 0px 0px 25px -5px #000000;
     width: 100%;
     min-height: 250px;
     max-height: 350px;
 }
 .gallery img{
-    width: 100%;
+    width:  100%;
 }
 .gallery>div{
     display: flex;
@@ -268,15 +268,38 @@ footer .contact p{
 }
 /* --- --- --- --- Login --- --- --- --- */
 div.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     width: 75%;
     min-height: 500px;
     margin: 5% auto;
     background-color: #dddddd;
     box-shadow: var(--sombra-base);
 }
-.login input{
+div.login p{
+    font-size: 3rem;
+    font-weight: 600;
+}
+div.login input{
     padding: 1rem;
     border: none;
+    font-size: 1.6rem;
+}
+div.login label{
+    font-size: 1.6rem;
+}
+div.login a{
+    color: #3498db;
+    text-decoration: underline;
+}
+input[type="password"]{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.login button[type="submit"]{
+    color: black;
 }
 
 /* --- --- --- --- Extras --- --- --- --- */

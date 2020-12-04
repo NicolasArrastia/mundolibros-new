@@ -11,16 +11,17 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div id="app">
+    <div id="login">
         <ml-header></ml-header>
         <main>
             <div class="login">
                 <form action="">
+                    <p>Log in</p>
                     <label for="">Username:</label>
-                    <input type="text" placeholder="username">
-                    <input type="text" placeholder="password">
-                    <input type="month">
-                    <a href="#">forgotd password?</a>
+                    <input type="text" v-model="username_input" placeholder="username">
+                    <input type="password" v-model="password_input" placeholder="password">
+                    <a href="#">forgot password?</a>
+                    <input type="submit" @click="verify_account" placeholder="Log in">
                 </form>
             </div>
         </main>
@@ -28,6 +29,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/components.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
