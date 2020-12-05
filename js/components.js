@@ -49,7 +49,7 @@ Vue.component('ml-error',{
     <div class="error">
         <h2><i class="fas fa-exclamation-triangle"></i></h2>
         <h3>Coming Soon</h3>
-        <p>The feature you are trying to access is unavailable or under construction.</p>
+        <p>The feature you are trying to access is unavailable or it's under construction.</p>
     </div>
     `
 });

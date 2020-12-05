@@ -403,7 +403,7 @@ footer .contact p{
 }
 /* --- --- --- --- Extras --- --- --- --- */
 div.error{
-    width: 75%;
+    width: 90%;
     margin: auto;
     padding: 10px;
     background-color: var(--warning-principal);
@@ -492,6 +492,10 @@ div.error p{
     }
     .text-container{
         padding: 2rem 1rem;
+    }
+
+    #login .container{
+        width: 100%;
     }
 }
 @media screen and (max-width:320px){
