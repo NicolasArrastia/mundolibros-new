@@ -14,15 +14,38 @@
     <div id="login">
         <ml-header></ml-header>
         <main>
-            <div class="login">
-                <form action="">
-                    <p>Log in</p>
-                    <label for="">Username:</label>
-                    <input type="text" v-model="username_input" placeholder="username">
-                    <input type="password" v-model="password_input" placeholder="password">
-                    <a href="#">forgot password?</a>
-                    <input type="submit" @click="verify_account" placeholder="Log in">
-                </form>
+            <div class="container">
+
+                <div class="login">
+                    <h2>Log in</h2>
+                    <form action="">
+                        <div>
+                            <input type="text" v-model="username_input" placeholder="username">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <input :type=show_password v-model="password_input" placeholder="password">
+                            <i :class="lock_icon" @click="alternate_password"></i>
+                            <!-- fas fa-lock -->
+                        </div>
+                        <button type="submit" @click="verify_account">Log in</button>
+                    </form>
+                    <a href="javascript:alert('Nothing for now')">forgot password?</a>
+                    <p class="secret">Try "user" and "1234". Also click that lock</p>
+                </div>
+                    
+                <div class="sign-up">
+                    <h2>Don't have an account?</h2>
+                    <form action="">
+                        <!-- <input type="text">
+                        <input type="text">
+                        <input type="password">
+                        <input type="password">
+                        <button>Sign up</button> -->
+                        <ml-error></ml-error>
+                    </form>
+                </div>
+
             </div>
         </main>
         <ml-footer></ml-footer>

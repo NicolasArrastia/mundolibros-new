@@ -17,6 +17,8 @@ html{
 
     --secondary:#89a3f0;
 
+    --succes:#b0ffb4;
+
     --color-secundario:#1f6f8b;
     --color-fondo-uno:#99a8b2;
     --color-fondo-dos:#e6d5b8;
@@ -43,6 +45,12 @@ html{
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+    text-decoration: none;
+}
+
+/* Every */
+a:visited{
+    color: black;
 }
 /* --- --- --- --- Header --- --- --- --- */
 header{
@@ -52,15 +60,19 @@ header{
     padding: 10px 10%;
     background-color: var(--color-principal);
 }
-/* header li{
-    font-family: 'Roboto',"Montserrat",sans-serif;
-} */
-li, a, button{
-    /* font-family: 'Roboto',"Montserrat",sans-serif; */
+
+header li,
+header a,
+header a:visited,
+header button{
     font-weight: 300;
     font-size: 1.6rem;
-    color: #edf0f1;
+    color: var(--font-white);
     text-decoration: none;
+}
+header a{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /* --- logo --- */
 header .logo{
@@ -70,6 +82,7 @@ header .logo{
 .nav_links{
     list-style:none;
     text-transform: capitalize;
+    margin-right: 2rem;
 }
 .nav_links li{
     display: inline-block;
@@ -98,7 +111,7 @@ header button:hover{
 
 /* --- --- --- --- Main --- --- --- --- */
 main{
-    min-height: 90vh;
+    min-height: 50vh;
     width: 100%;
     margin: auto;
     background-color: #fff;
@@ -143,13 +156,14 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
     padding: 4rem 10%;
 }
 .text-container>div{
     width: 40%;
 }
-.text-container .underline{
-    background-color: rgb(137, 163, 240);
+.underline{
+    background-color: #89a3f0;
     height: .5rem;
     margin: 1rem 0rem;
 }
@@ -189,7 +203,7 @@ main>section:nth-of-type(2n+1){
 footer{
     background-color: var(--color-principal);
     color: var(--font-white);
-    padding: 2rem;
+    padding: 5rem 1rem 3rem 1rem;
     box-shadow: 0px 0px 25px -10px #000000;
 }
 
@@ -204,6 +218,7 @@ footer .logo-prueba{
 footer .social-media{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 footer .social-media a{
     display: flex;
@@ -215,7 +230,7 @@ footer .social-media a{
     border: 1px solid #858585;
     border-bottom: 5px solid #858585;
     border-radius: 50%;
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 footer i{
@@ -256,6 +271,7 @@ footer .contact{
 footer .contact a,
 footer .contact p{
     font-size: 1.6rem;
+    color: var(--font-white);
     text-transform: capitalize;
     padding: 5px 0px;
 }
@@ -267,41 +283,124 @@ footer .contact p{
     color: grey;
 }
 /* --- --- --- --- Login --- --- --- --- */
-div.login{
+#login main{
+    background-color: #efefef;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    width: 75%;
-    min-height: 500px;
-    margin: 5% auto;
-    background-color: #dddddd;
-    box-shadow: var(--sombra-base);
-}
-div.login p{
-    font-size: 3rem;
-    font-weight: 600;
-}
-div.login input{
-    padding: 1rem;
-    border: none;
-    font-size: 1.6rem;
-}
-div.login label{
-    font-size: 1.6rem;
-}
-div.login a{
-    color: #3498db;
-    text-decoration: underline;
-}
-input[type="password"]{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.login button[type="submit"]{
-    color: black;
+    padding: 4rem;
+    padding-right: 4rem;
 }
 
+#login .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 75%;
+    min-height: 200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: var(--sombra-base);
+}
+
+#login .login,
+#login .sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+}
+
+#login .login{
+    background-color: #fff;
+    border-radius: 20px 0px 0px 20px ;
+}
+
+#login .login>h2,
+#login .sign-up>h2{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-bottom: 5rem;
+}
+#login .login form{
+    margin-bottom: 5rem;
+}
+#login .login form>div{
+    display: flex;
+    width: 100%;
+}
+#login .container input{
+    background-color: #ddd;
+    border-radius: 10px 0px 0px 10px;
+    width: 100%;
+    height: 38px;
+    padding: 1rem;
+    border: 1px solid #868686;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#login .container input:focus{
+    background-color: #cccccc;
+    outline:none;
+}
+#login .login i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    background-color: #cfcfcf;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid #868686;
+    border-left: none;
+    height: 38px;
+    font-size: 1.6rem;
+}
+#login .login .fas.fa-lock:hover,
+#login .login .fas.fa-lock-open:hover{
+    background-color: #afafaf;
+}
+
+#login .container label{
+    font-size: 1.6rem;
+}
+#login .container a{
+    color: #57b1ee;
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+#login .login button[type="submit"]{
+    color: black;
+    font-size: 1.8rem;
+    background-color: #ddd;
+    border: 1px solid #868686;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+#login .login button[type="submit"]:hover{
+    background-color: #afafaf;
+}
+
+#login .sign-up{
+    width: 100%;
+    background-color: #89a3f0;
+    border-radius: 0px 20px 20px 0px;
+}
+
+
+
+
+
+#login .secret{
+    color: rgb(154, 165, 177);
+}
 /* --- --- --- --- Extras --- --- --- --- */
 div.error{
     width: 75%;
@@ -355,8 +454,48 @@ div.error p{
     src: url("fonts/Roboto-Regular.ttf");
 }
 /* --- --- --- --- MQs --- --- --- --- */
-@media screen and (max-width:425px){
+
+@media screen and (max-width:1024px){
+    .text-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 2rem 10%;
+    }
+    .text-container>div{
+        width: 100%;
+    }
+    .text-container>div:not(:last-child){
+        margin-bottom: 4rem;
+    }
+
+
+    #login .container{
+        grid-template-columns: 1fr;
+    }
+    #login .login{
+        border-radius: 20px 20px 0px 0px;
+    }
+    #login .sign-up{
+        border-radius: 0px 0px 20px 20px;
+    }
+}
+
+@media screen and (max-width:768px){
     header nav{
         display: none;
+    }
+}
+
+@media screen and (max-width:425px){
+    .background-img h1{
+        font-size: 5rem;
+    }
+    .text-container{
+        padding: 2rem 1rem;
+    }
+}
+@media screen and (max-width:320px){
+    .background-img h1{
+        font-size: 4rem;
     }
 }

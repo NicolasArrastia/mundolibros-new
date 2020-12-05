@@ -1,27 +1,43 @@
 Vue.component('ml-header',{
     template:/*html*/`
-
+        <header>
+            <ml-logo class="logo"></ml-logo>
+            <nav class="nav_links">
+                <ul>
+                    <li>
+                        <a href="#">products</a>
+                        <!-- <i class="fas fa-bags-shopping"></i> -->
+                    </li>
+                    <li>
+                        <a href="#">about</a>
+                    </li>
+                    <li>
+                        <a href="#">features</a>
+                    </li>
+                    <li>
+                        <a href="#">gallery</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="login.html" class="cta"><button>Login</button></a>
+        </header>
     `
 });
 
 Vue.component('ml-footer',{
     template:/*html*/`
         <footer>
-            <div>
-                <ml-logo></ml-logo>
-            </div>
-
             <div class="social-media">
-                <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/nicolás-arrastía/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/nicolás-arrastía/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
 
             <div class="contact">
                 <p><a href="#">info</a> • <a href="#">support</a> • <a href="#">Marketing</a></p>
                 <p><a href="#">terms of use</a> • <a href="#">privacy policy</a></p>
-                <p><a href="https://matias.ma/nsfw/"><span>ditto?</span></a></p>
+                <p><a href="https://matias.ma/nsfw/"><span>The box?</span></a></p>
             </div>
 
             <p id="copyright">© 2020 Mundo Libros!</p>
