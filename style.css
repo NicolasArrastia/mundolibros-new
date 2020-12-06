@@ -296,7 +296,7 @@ footer .contact p{
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    width: 75%;
+    width: 80%;
     min-height: 200px;
     margin: 0 auto;
     border-radius: 20px;
@@ -310,6 +310,7 @@ footer .contact p{
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+    text-align: center;
     width: 100%;
     padding: 20px;
 }
@@ -328,7 +329,7 @@ footer .contact p{
 #login .login form{
     margin-bottom: 5rem;
 }
-#login .login form>div{
+#login .container form>div{
     display: flex;
     width: 100%;
 }
@@ -347,7 +348,10 @@ footer .contact p{
     background-color: #cccccc;
     outline:none;
 }
-#login .login i{
+#login .container input.wrong{
+    background-color: rgba(228, 123, 123, 0.596);
+}
+#login .container i{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -360,8 +364,8 @@ footer .contact p{
     height: 38px;
     font-size: 1.6rem;
 }
-#login .login .fas.fa-lock:hover,
-#login .login .fas.fa-lock-open:hover{
+#login .container .fas.fa-lock:hover,
+#login .container .fas.fa-lock-open:hover{
     background-color: #afafaf;
 }
 
@@ -373,7 +377,7 @@ footer .contact p{
     font-size: 1.6rem;
     text-decoration: underline;
 }
-#login .login button[type="submit"]{
+#login .container button[type="submit"]{
     color: black;
     font-size: 1.8rem;
     background-color: #ddd;
@@ -384,7 +388,7 @@ footer .contact p{
     margin: 0 auto;
     margin-top: 2rem;
 }
-#login .login button[type="submit"]:hover{
+#login .container button[type="submit"]:hover{
     background-color: #afafaf;
 }
 
@@ -399,7 +403,8 @@ footer .contact p{
 
 
 #login .secret{
-    color: rgb(154, 165, 177);
+    background-color: rgba(216, 104, 104, 0.541) !important;
+    border: 1px solid rgb(104, 18, 18) !important;
 }
 /* --- --- --- --- Extras --- --- --- --- */
 div.error{

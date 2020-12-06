@@ -20,30 +20,43 @@
                     <h2>Log in</h2>
                     <form action="">
                         <div>
-                            <input type="text" v-model="username_input" placeholder="username">
+                            <input type="text" v-model="login_username" placeholder="username">
                             <i class="fas fa-user"></i>
                         </div>
+
                         <div>
-                            <input :type=show_password v-model="password_input" placeholder="password">
-                            <i :class="lock_icon" @click="alternate_password"></i>
-                            <!-- fas fa-lock -->
+                            <input :type="type_password" v-model="login_password" placeholder="password">
+                            <i :class="login_lock_icon" @click="alternate_login"></i>
                         </div>
+
                         <button type="submit" @click="verify_account">Log in</button>
                     </form>
                     <a href="javascript:alert('Nothing for now')">forgot password?</a>
-                    <p class="secret">Try "user" and "1234". Also click that lock</p>
+                    <p>Try <span translate='no'>"user"</span> and "1234" Also click that lock</p>
                 </div>
                     
                 <div class="sign-up">
                     <h2>Don't have an account?</h2>
                     <form action="">
-                        <!-- <input type="text">
-                        <input type="text">
-                        <input type="password">
-                        <input type="password">
-                        <button>Sign up</button> -->
-                        <ml-error></ml-error>
+                        <div>
+                            <input type="text" placeholder="username" v-model="register_username">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <input type="email" placeholder="email" v-model="register_email">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <input :type="type_register_password" placeholder="password" v-model="register_password">
+                            <i :class="register_lock_icon" @click="alternate_signup_password"></i>
+                        </div>
+                        <div>
+                            <input :type="type_register_confirm" placeholder="confirm password" v-model="register_confirm">
+                            <i :class="confirm_lock_icon" @click="alternate_signup_confirm"></i>
+                        </div>
+                        <button type="submit" @click="register">Sign up</button>
                     </form>
+                    <p>This will not work</p>
                 </div>
 
             </div>
