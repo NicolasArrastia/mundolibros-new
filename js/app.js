@@ -1,28 +1,25 @@
-// quiero hacer una dedicatoria a la programadora Vanina Ariño por haberme inspirado a meterme en este mundo tan hermoso llamado programación web, la que me ayudó a crecer como persona y como desarrollador, la que me ayudó a tener fe en mi mismo cada día para ser lo que soy ahora. Gracias Vani ♥
-
-
-// !!! Guardar info de user con localStorage y recuperarla
-
 const app = new Vue({
     el:'#app',
     data:{
         user:{
-            firstName:'Vanina',
-            lastName:'Ariño',
-            password:'',
-            loged:false
-        },
-        firstName:'userName Vani',
-    },
-    created:function(){
-        let userData = JSON.parse(localStorage.getItem('user'));
-        if(userData === null){
-            this.user = {};
-            console.log(this.userData);
+            first_name:'Vanina',
+            last_name:'Ariño',
+            cart:[
+                {
+                    name:'Lovecraft Vol.II',
+                    id:'56',
+                    description:'This is the second volume of the greatest Lovecraft\'s stories',
+                    genre:['Cosmic Horror', 'Suspense'],
+                    url:'img/background01.png'
+                },
+                {
+                    name:'The Hobbit',
+                    id:'78',
+                    description:'An epic medieval history',
+                    genre:['Fantasy', 'Medieval'],
+                    url:'img/background02.png'
+                }
+            ]
         }
-        else{
-            this.user = datosDB
-        }
-        localStorage.setItem('user',JSON.stringify(this.user))
     }
-});
+})

@@ -38,13 +38,13 @@ html{
     box-sizing: border-box;
     font-family: sans-serif;
 
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     text-decoration: none;
 }
 
@@ -199,6 +199,44 @@ main{
 main>section:nth-of-type(2n+1){
     box-shadow: inset 0px 0px 25px -10px #000000;
 }
+/* --- --- --- --- Products --- --- --- --- */
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #95b1e5; */
+}
+
+.card{
+    width: 230px;
+    height: 330px;
+    border-radius: .8rem;
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, 3);
+    overflow: hidden;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+    transition: all .25s;
+    background-color: #f1f1f1;
+}
+.card h4{
+    font-size: 1.8rem;
+}
+.card .product-id{
+    font-size: 1rem;
+    color: grey;
+}
+.card p{
+    font-size: 1.5rem;
+}
+.card img{
+    width: 100%;
+}
+.card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 3);
+}
+
 /* --- --- --- --- Footer --- --- --- --- */
 footer{
     background-color: var(--color-principal);
@@ -397,10 +435,6 @@ footer .contact p{
     background-color: #89a3f0;
     border-radius: 0px 20px 20px 0px;
 }
-
-
-
-
 
 #login .secret{
     background-color: rgba(216, 104, 104, 0.541) !important;

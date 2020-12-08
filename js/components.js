@@ -5,7 +5,7 @@ Vue.component('ml-header',{
             <nav class="nav_links">
                 <ul>
                     <li>
-                        <a href="#">products</a>
+                        <a href="products.html">products</a>
                         <!-- <i class="fas fa-bags-shopping"></i> -->
                     </li>
                     <li>
@@ -28,7 +28,7 @@ Vue.component('ml-footer',{
     template:/*html*/`
         <footer>
             <div class="social-media">
-                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.twitter.com/DBlue_16" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/nicolás-arrastía/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
