@@ -9,7 +9,7 @@ const app = new Vue({
                     name:'Lovecraft Vol.II',
                     id:'56',
                     description:'This is the second volume of the greatest Lovecraft\'s stories',
-                    genres:['Cosmic Horror', 'Suspense'],
+                    genres:['Cosmic Horror', 'Suspense', 'Gore'],
                     url:'img/background01.png'
                 },
                 {
@@ -19,13 +19,20 @@ const app = new Vue({
                     genres:['Fantasy', 'Medieval'],
                     url:'img/background02.png'
                 }
-            ]
+            ],
+            favlist:[]
         }
     },
     methods:{
-        addToCart:function(title,id,desc){
-            // this.user.cart=[{name:title,id:id,description:desc}]
-            this.user.cart.push({name:title,id:id,description:desc,url:'img/Psicología-del-color_-el-azul.png'})
+        addToCart:function(item){
+            this.user.cart.push(item)
+        },
+        addToFav:function(item){
+            this.user.favlist.push(item)
+        },
+        deleteFromFav:function(item){
+            this.user.favlist.shift(item)
+            // alert(item)
         }
     }
 })

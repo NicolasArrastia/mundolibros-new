@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Libros!</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/09f81313b3.js" crossorigin="anonymous"></script>
+    <!-- icono -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div id="app">
+        <ml-header></ml-header>
+        <main>
+            <div class="">
+
+                <h2>
+                    {{focus.name}}
+                </h2>
+                <p>
+                    {{focus.description}}
+                </p>
+                <img :src="this.focus.url" alt="info image">
+                
+            </div>
+        </main>
+        <ml-footer></ml-footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

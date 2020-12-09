@@ -16,12 +16,10 @@
         
         <ml-header></ml-header>
         <main>
-            <aside>
-                
-            </aside>
-
             <div class="container">
-
+                <h2>
+                    Cart
+                </h2>
                 <div class="card" v-for="product in user.cart">
                     <h4>
                         {{product.name}}
@@ -30,12 +28,17 @@
                         Product ID: {{product.id}}
                     </p>
                     <ul class="genres">
-                        <li v-for="genre in product.genre">
+                        <li v-for="genre in product.genres">
                             <span>
                                 {{genre}}
                             </span>
                         </li>
                     </ul>
+                    <div class="actions">
+                        <i @click="addToCart(product)" class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-heart" @click="addToFav(product)"></i>
+                        <i class="fas fa-info"></i>
+                    </div>
                     <div class="underline"></div>
                     <p class="description">
                         {{product.description}}
@@ -44,8 +47,35 @@
                 </div>
 
             </div>
-
-            <button @click="addToCart('Ejemplo01','002','Just a test item')">AGREGAR AL CARRO</button>
+            <div class="container">
+            <h2>
+                Fav list
+            </h2>
+                <div class="card" v-for="(product, i) in user.favlist">
+                    <h4>
+                        {{product.name}}
+                    </h4>
+                    <p class="product-id">
+                        Product ID: {{product.id}}
+                    </p>
+                    <ul class="genres">
+                        <li v-for="genre in product.genres">
+                            <span>
+                                {{genre}}
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="actions">
+                        <i @click="addToCart(product)" class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-heart-broken" @click="deleteFromFav(i)"></i>
+                    </div>
+                    <div class="underline"></div>
+                    <p class="description">
+                        {{product.description}}
+                    </p>
+                    <img :src="product.url" alt="imagen">
+                </div>
+            </div>
 
         </main>
         <ml-footer></ml-footer>

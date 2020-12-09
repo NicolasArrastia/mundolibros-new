@@ -29,8 +29,7 @@ const login = new Vue({
             }
         },
 
-
-
+        
         alternate_login:function(){
             if(this.type_password === 'password'){
                 this.type_password = 'text'
