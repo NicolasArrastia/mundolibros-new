@@ -27,21 +27,25 @@
                         {{product.name}}
                     </h4>
                     <p class="product-id">
-                        ID: {{product.id}}
+                        Product ID: {{product.id}}
                     </p>
-                    <ul>
-                        <li v-for="product.genre">
-                            {{product.genre}}
+                    <ul class="genres">
+                        <li v-for="genre in product.genre">
+                            <span>
+                                {{genre}}
+                            </span>
                         </li>
                     </ul>
                     <div class="underline"></div>
-                    <p>
+                    <p class="description">
                         {{product.description}}
                     </p>
                     <img :src="product.url" alt="imagen">
                 </div>
 
             </div>
+
+            <button @click="addToCart('Ejemplo01','002','Just a test item')">AGREGAR AL CARRO</button>
 
         </main>
         <ml-footer></ml-footer>

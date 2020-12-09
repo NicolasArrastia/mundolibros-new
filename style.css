@@ -162,10 +162,15 @@ main{
 .text-container>div{
     width: 40%;
 }
-.underline{
+.text-container.underline{
     background-color: #89a3f0;
     height: .5rem;
     margin: 1rem 0rem;
+}
+.underline{
+    background-color: #89a3f0;
+    height: .5rem;
+    margin: 0rem 0rem;
 }
 .text-container h2{
     font-size: 3rem;
@@ -231,6 +236,28 @@ main>section:nth-of-type(2n+1){
 }
 .card img{
     width: 100%;
+}
+.card ul.genres{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 1rem 0rem .8rem;
+}
+.card ul.genres span{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.2rem .6rem;
+    margin-left: 0.5rem;
+    margin-bottom: .4rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    background-color: #528896ea;
+}
+.card p.description{
+    color: #242424;
+    margin: 1rem 0rem;
 }
 .card:hover{
     transform: translateY(-15px);
